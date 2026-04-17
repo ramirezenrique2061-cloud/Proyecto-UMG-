@@ -13,3 +13,18 @@ class Manager(Tk):
         container = Frame(self)
         container.pack(side=TOP, fill=BOTH, expand=True)
         container.configure(bg="#C6D9E3")
+
+self.frame = {}
+for i in (Login, Registro, Container):
+    frame = i(container, self)
+    self.frame[i] = frame
+
+self.show_frame(Login)
+
+def show_frame(self, container):
+    frame = self.frame[container]
+    frame.tkraise()
+
+def main():
+    app = Manager()
+    app.mainloop()
