@@ -1,0 +1,15 @@
+from tkinter import *
+from tkinter import ttk
+import sys
+import os
+
+class Manager(Tk):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.title("Mini Market V1.0")
+        self.geometry("1100x650+120+20")
+        self.resizable(False, False)
+
+        container = Frame(self)
+        container.pack(side=TOP, fill=BOTH, expand=True)
+        container.configure(bg="#C6D9E3")
